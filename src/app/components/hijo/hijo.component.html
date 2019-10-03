@@ -1,0 +1,13 @@
+<!-- 
+  Lo comentado es la forma anterior de llegar a el resultado
+-->
+<h3>Hijo Component</h3>
+<hr>
+<!-- <h5>{{ mensaje }}</h5> -->
+<!-- <h5>{{ _dataService.nombre$ | async }}</h5> -->
+<h5 *ngIf="_dataService.nombre$ | async as nombre; else mensaje">
+  {{ nombre }}
+</h5>
+<ng-template #mensaje>
+  <h5>Mensaje</h5>
+</ng-template>
